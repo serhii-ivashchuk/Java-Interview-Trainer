@@ -39,4 +39,7 @@ public class Answer {
     public void setAnswerAudioLink(String answerAudioLink) {
         this.answerAudioLink = answerAudioLink;
     }
+
+    public Answer() {
+    }
 }
