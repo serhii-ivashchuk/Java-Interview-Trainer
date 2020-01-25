@@ -14,4 +14,18 @@ public class Question {
 
     @Enumerated(EnumType.STRING)
     private QuestionType questionType;
+
+        enum QuestionType {
+            BEHAVIORAL("Behavioral"),
+            TECHNICAL("Technical");
+            private final String displayValue;
+
+            private QuestionType(String displayValue) {
+                this.displayValue = displayValue;
+            }
+
+            public String getDisplayValue() {
+                return displayValue;
+            }
+        }
 }
