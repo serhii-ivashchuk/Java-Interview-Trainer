@@ -10,6 +10,6 @@ public class QuestionController {
 
     @GetMapping
     public String getAllQuestions(){
-        return "";
+        return "all_questions";
     }
 }
