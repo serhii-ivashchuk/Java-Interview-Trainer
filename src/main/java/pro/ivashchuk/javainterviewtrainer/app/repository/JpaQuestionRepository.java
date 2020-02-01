@@ -10,4 +10,5 @@ public interface JpaQuestionRepository extends JpaRepository<Question, Long> {
     List<Question> findAll();
     Optional<Question> findById(Long id);
     Question save(Question question);
+    void delete(Question question);
 }
