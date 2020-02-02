@@ -9,4 +9,5 @@ import java.util.Optional;
 public interface JpaAnswerRepository extends JpaRepository<Answer, Long> {
     List<Answer> findAll();
     Optional<Answer> findById(Long id);
+    Answer save(Answer answer);
 }
