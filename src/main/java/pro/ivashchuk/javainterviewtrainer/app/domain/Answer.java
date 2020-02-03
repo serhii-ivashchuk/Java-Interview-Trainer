@@ -18,6 +18,7 @@ public class Answer {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="question_id")
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Question question;
 
     public Long getId() {
