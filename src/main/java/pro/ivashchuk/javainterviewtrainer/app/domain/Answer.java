@@ -53,6 +53,10 @@ public class Answer {
         this.question = question;
     }
 
+    public Long getQuestionId(){
+        return question.getId();
+    }
+
     public Answer() {
     }
 }
