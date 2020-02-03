@@ -17,6 +17,7 @@ public class Answer {
     private String answerAudioLink;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="question_id")
     private Question question;
 
     public Long getId() {
