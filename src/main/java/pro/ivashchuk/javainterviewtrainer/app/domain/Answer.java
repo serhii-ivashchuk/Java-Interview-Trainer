@@ -16,6 +16,8 @@ public class Answer {
 
     private String answerAudioLink;
 
+    private Question question;
+
     public Long getId() {
         return id;
     }
