@@ -16,6 +16,7 @@ public class Answer {
 
     private String answerAudioLink;
 
+    @ManyToOne(fetch = FetchType.LAZY)
     private Question question;
 
     public Long getId() {
