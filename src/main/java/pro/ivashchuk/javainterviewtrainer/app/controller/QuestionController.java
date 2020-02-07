@@ -18,4 +18,10 @@ public class QuestionController {
         model.addAttribute("questions", questions);
         return "all_questions";
     }
+
+    @GetMapping("/addNewQuestion")
+    public String addNewQuestion(Model model) {
+        model.addAttribute("question", new Question());
+        return "add_new_question";
+    }
 }
