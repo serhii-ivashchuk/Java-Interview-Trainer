@@ -12,6 +12,12 @@ import java.util.List;
 @RequestMapping("/questions")
 public class QuestionController {
 
+    private JpaQuestionRepository jpaQuestionRepository;
+
+    public QuestionController(JpaQuestionRepository jpaQuestionRepository) {
+        this.jpaQuestionRepository = jpaQuestionRepository;
+    }
+
     @GetMapping
     public String getAllQuestions(Model model){
         List<Question> questions = jpaQuestionRepository.findAll();
