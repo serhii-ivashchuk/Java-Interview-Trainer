@@ -24,4 +24,10 @@ public class QuestionController {
         model.addAttribute("question", new Question());
         return "add_new_question";
     }
+
+    @PostMapping("/addNewQuestion")
+    public String processNewQuestion(@Valid Question question) {
+        jpaQuestionRepository.save(question);
+        return "redirect:/questions";
+    }
 }
