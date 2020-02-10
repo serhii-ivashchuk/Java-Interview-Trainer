@@ -36,4 +36,11 @@ public class QuestionController {
         jpaQuestionRepository.save(question);
         return "redirect:/questions";
     }
+
+    @GetMapping("/question/{id}")
+    public String getQuestionById(@PathVariable("id") Long id, Model model) {
+        Question question = jpaQuestionRepository.findById(id).get();
+        model.addAttribute("question", question);
+        return "question";
+    }
 }
