@@ -9,5 +9,9 @@
 <body>
 <h1>Question</h1>
 <div th:include="header"></div>
+<div th:object="${question}">
+    <span text="">Question</span><br>
+    <p th:text="${question.questionText}">question</p>
+    </div>
 </body>
 </html>
