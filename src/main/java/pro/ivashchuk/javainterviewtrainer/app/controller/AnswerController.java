@@ -20,4 +20,10 @@ public class AnswerController {
         model.addAttribute("answer", new Answer());
         return "add_new_answer";
     }
+
+    @PostMapping("/addNewAnswer")
+    public String processNewAnswer(@Valid Answer answer) {
+        jpaAnswerRepository.save(answer);
+        return "redirect:/answers";
+    }
 }
