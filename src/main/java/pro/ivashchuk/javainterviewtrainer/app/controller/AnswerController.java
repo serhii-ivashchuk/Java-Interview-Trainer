@@ -2,6 +2,12 @@ package pro.ivashchuk.javainterviewtrainer.app.controller;
 
 public class AnswerController {
 
+    private JpaAnswerRepository jpaAnswerRepository;
+
+    public AnswerController(JpaAnswerRepository jpaAnswerRepository) {
+        this.jpaAnswerRepository = jpaAnswerRepository;
+    }
+
     @GetMapping
     public String getAllAnswers (Model model) {
         List<Answer> answers = jpaAnswerRepository.findAll();
