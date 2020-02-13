@@ -8,4 +8,10 @@ public class AnswerController {
         model.addAttribute("answers", answers);
         return "all_answers";
     }
+
+    @GetMapping("/addNewAnswer")
+    public String addNewAnswer (Model model) {
+        model.addAttribute("answer", new Answer());
+        return "add_new_answer";
+    }
 }
