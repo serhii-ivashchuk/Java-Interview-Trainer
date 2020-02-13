@@ -26,4 +26,11 @@ public class AnswerController {
         jpaAnswerRepository.save(answer);
         return "redirect:/answers";
     }
+
+    @GetMapping("/answer/{id}")
+    public String getAnswerById(@PathVariable("id") Long id, Model model) {
+        Answer answer = jpaAnswerRepository.findById(id).get();
+        model.addAttribute("answer", answer);
+        return "answer";
+    }
 }
