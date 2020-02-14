@@ -33,4 +33,11 @@ public class AnswerController {
         model.addAttribute("answer", answer);
         return "answer";
     }
+
+    @GetMapping("/answer/{id}/delete")
+    public String deleteAnswerById(@PathVariable("id") Long id) {
+        Answer answer = jpaAnswerRepository.findById(id).get();
+        jpaAnswerRepository.delete(answer);
+        return "redirect:/answers";
+    }
 }
