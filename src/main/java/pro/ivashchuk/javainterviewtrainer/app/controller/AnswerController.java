@@ -1,15 +1,19 @@
 package pro.ivashchuk.javainterviewtrainer.app.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import pro.ivashchuk.javainterviewtrainer.app.domain.Answer;
 import pro.ivashchuk.javainterviewtrainer.app.repository.JpaAnswerRepository;
 
 import javax.validation.Valid;
 import java.util.List;
 
+@Controller
+@RequestMapping("/answers")
 public class AnswerController {
 
     private JpaAnswerRepository jpaAnswerRepository;
