@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pro.ivashchuk.javainterviewtrainer.app.domain.Question;
+import pro.ivashchuk.javainterviewtrainer.app.repository.JpaQuestionRepository;
 
 import java.util.List;
 
