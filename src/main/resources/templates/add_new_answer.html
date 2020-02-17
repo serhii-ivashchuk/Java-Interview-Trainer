@@ -9,5 +9,12 @@
 <body>
 <h1>Please add your answer.</h1><br>
 <div th:include="header"></div>
+<form method="POST" th:object="${answer}">
+    <div>
+        <h3>Answer:</h3>
+        <input type="text" th:field="*{answerText}">
+        <input type="submit" value="Submit Answer"/>
+    </div>
+</form>
 </body>
 </html>
