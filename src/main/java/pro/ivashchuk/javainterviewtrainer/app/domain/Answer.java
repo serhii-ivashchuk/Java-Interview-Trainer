@@ -59,4 +59,12 @@ public class Answer {
 
     public Answer() {
     }
+
+    public Answer(String answerText) {
+        this.answerText = answerText;
+    }
+
+    public Answer(Question question) {
+        this.question = question;
+    }
 }
