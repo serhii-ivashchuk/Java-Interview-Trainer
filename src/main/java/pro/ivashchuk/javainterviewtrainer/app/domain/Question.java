@@ -15,6 +15,18 @@ public class Question {
     @Enumerated(EnumType.STRING)
     private QuestionType questionType;
 
+    public Question() {
+    }
+
+    public Question(Long id, String questionText, QuestionType questionType) {
+        this.id = id;
+        this.questionText = questionText;
+        this.questionType = questionType;
+    }
+    public Question(String questionText) {
+        this.questionText = questionText;
+    }
+
         enum QuestionType {
             BEHAVIORAL("Behavioral"),
             TECHNICAL("Technical");
