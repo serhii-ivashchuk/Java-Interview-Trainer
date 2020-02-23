@@ -10,6 +10,8 @@
 <h1>All Questions!</h1><br>
 <div th:include="header"></div>
 <div th:each="question: ${questions}">
+    <a th:href="@{/questions/question/{id}(id=${question.id})}">
+        <span th:text="${question.questionText}">QuestionText</span></a>
 </div>
 </body>
 </html>
