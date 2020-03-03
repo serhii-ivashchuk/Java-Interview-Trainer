@@ -16,6 +16,7 @@
         <span th:text="${question.questionText}">QuestionText</span></a>
         <a th:href="@{/questions/question/{id}/change(id=${question.id})}">Change Question</a>
         <a th:href="@{/questions/question/{id}/delete(id=${question.id})}">Delete Question</a>
+        <a th:href="@{/questions/question/{id}/addNewAnswer(id=${question.id})}"> Add Answer</a>
         </p>
     </li>
     </ol>
