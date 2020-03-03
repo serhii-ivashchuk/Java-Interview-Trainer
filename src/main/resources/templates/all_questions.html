@@ -10,8 +10,15 @@
 <h1>All Questions!</h1><br>
 <div th:include="header"></div>
 <div th:each="question: ${questions}">
-    <a th:href="@{/questions/question/{id}(id=${question.id})}">
+    <ol>
+    <li>
+        <p>Q: <a th:href="@{/questions/question/{id}(id=${question.id})}">
         <span th:text="${question.questionText}">QuestionText</span></a>
+        <a th:href="@{/questions/question/{id}/change(id=${question.id})}">Change Question</a>
+        <a th:href="@{/questions/question/{id}/delete(id=${question.id})}">Delete Question</a>
+        </p>
+    </li>
+    </ol>
 </div>
 </body>
 </html>
