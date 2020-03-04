@@ -9,8 +9,8 @@
 <body>
 <h1>All Questions!</h1><br>
 <div th:include="header"></div>
+<ol>
 <div th:each="question: ${questions}">
-    <ol>
     <li>
         <p>Q: <a th:href="@{/questions/question/{id}(id=${question.id})}">
         <span th:text="${question.questionText}">QuestionText</span></a>
@@ -19,7 +19,7 @@
         <a th:href="@{/questions/question/{id}/addNewAnswer(id=${question.id})}">Add Answer </a>
         </p>
     </li>
-    </ol>
 </div>
+</ol>
 </body>
 </html>
