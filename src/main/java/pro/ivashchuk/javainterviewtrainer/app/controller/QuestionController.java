@@ -30,7 +30,7 @@ public class QuestionController {
     }
 
     @GetMapping("/addNewQuestion")
-    public String addNewQuestion(Model model) {
+    public String getAddNewQuestion(Model model) {
         model.addAttribute("question", new Question());
         return "add_new_question";
     }
