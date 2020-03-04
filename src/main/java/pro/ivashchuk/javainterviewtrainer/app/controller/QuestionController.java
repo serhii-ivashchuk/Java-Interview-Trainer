@@ -49,7 +49,7 @@ public class QuestionController {
     }
 
     @GetMapping("/question/{id}/delete")
-    public String deleteQuestionById(@PathVariable("id") Long id) {
+    public String getDeleteQuestionById(@PathVariable("id") Long id) {
         Question question = jpaQuestionRepository.findById(id).get();
         jpaQuestionRepository.delete(question);
         return "redirect:/questions";
