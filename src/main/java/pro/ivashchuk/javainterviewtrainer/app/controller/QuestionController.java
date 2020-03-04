@@ -23,7 +23,7 @@ public class QuestionController {
     }
 
     @GetMapping
-    public String getAllQuestions(Model model){
+    public String getAllQuestions(Model model) {
         List<Question> questions = jpaQuestionRepository.findAll();
         model.addAttribute("questions", questions);
         return "all_questions";
