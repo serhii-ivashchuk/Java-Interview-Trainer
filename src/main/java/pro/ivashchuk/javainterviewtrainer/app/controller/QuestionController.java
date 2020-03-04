@@ -36,7 +36,7 @@ public class QuestionController {
     }
 
     @PostMapping("/addNewQuestion")
-    public String processNewQuestion(@Valid Question question) {
+    public String postProcessNewQuestion(@Valid Question question) {
         jpaQuestionRepository.save(question);
         return "redirect:/questions";
     }
