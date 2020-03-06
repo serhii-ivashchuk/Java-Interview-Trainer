@@ -61,4 +61,8 @@ public class QuestionController {
         model.addAttribute("question", question);
         return "question";
     }
+
+    private boolean isEmptyOrNull(String value) {
+        return value != "" && value != null;
+    }
 }
