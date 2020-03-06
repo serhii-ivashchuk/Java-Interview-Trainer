@@ -62,6 +62,16 @@ public class QuestionController {
         return "question";
     }
 
+    @PostMapping("/question/{id}/change")
+    public String postProcessChangeQuestionById(@PathVariable("id") Long id, Question changedQuestion) {
+        Question question = jpaQuestionRepository.findById(id).get();
+        if (isEmptyOrNull(changedQuestion.getQuestionText())) {
+            question.setQuestionText(changedQuestion.getQuestionText());
+        }
+        jpaQuestionRepository.save(question);
+        return "redirect:/questions";
+    }
+
     private boolean isEmptyOrNull(String value) {
         return value != "" && value != null;
     }
