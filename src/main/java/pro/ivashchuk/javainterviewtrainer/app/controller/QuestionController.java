@@ -54,4 +54,11 @@ public class QuestionController {
         jpaQuestionRepository.delete(question);
         return "redirect:/questions";
     }
+
+    @GetMapping("/question/{id}/change")
+    public String getChangeQuestionById(@PathVariable("id") Long id, Model model) {
+        Question question = jpaQuestionRepository.findById(id).get();
+        model.addAttribute("question", question);
+        return "question";
+    }
 }
