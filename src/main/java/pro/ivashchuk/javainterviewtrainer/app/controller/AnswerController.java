@@ -49,7 +49,7 @@ public class AnswerController {
     }
 
     @GetMapping("/answer/{id}/delete")
-    public String deleteAnswerById(@PathVariable("id") Long id) {
+    public String getDeleteAnswerById(@PathVariable("id") Long id) {
         Answer answer = jpaAnswerRepository.findById(id).get();
         jpaAnswerRepository.delete(answer);
         return "redirect:/answers";
