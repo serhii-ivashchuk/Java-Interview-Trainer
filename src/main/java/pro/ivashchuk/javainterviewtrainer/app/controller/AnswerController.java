@@ -36,7 +36,7 @@ public class AnswerController {
     }
 
     @PostMapping("/addNewAnswer")
-    public String processNewAnswer(@Valid Answer answer) {
+    public String postProcessNewAnswer(@Valid Answer answer) {
         jpaAnswerRepository.save(answer);
         return "redirect:/answers";
     }
