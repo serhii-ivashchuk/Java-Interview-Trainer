@@ -30,7 +30,7 @@ public class AnswerController {
     }
 
     @GetMapping("/addNewAnswer")
-    public String addNewAnswer (Model model) {
+    public String getAddNewAnswer (Model model) {
         model.addAttribute("answer", new Answer());
         return "add_new_answer";
     }
