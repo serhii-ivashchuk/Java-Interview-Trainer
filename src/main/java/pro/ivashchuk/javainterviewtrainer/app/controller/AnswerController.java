@@ -54,4 +54,11 @@ public class AnswerController {
         jpaAnswerRepository.delete(answer);
         return "redirect:/answers";
     }
+
+    @GetMapping("/answer/{id}/change")
+    public String getChangeAnswerById(@PathVariable("id") Long id, Model model) {
+        Answer answer = jpaAnswerRepository.findById(id).get();
+        model.addAttribute("answer", answer);
+        return "answer";
+    }
 }
