@@ -62,6 +62,15 @@ public class AnswerController {
         return "answer";
     }
 
+    @PostMapping("/answer/{id}/change")
+    public String postProcessChangeAnswerById(@PathVariable("id") Long id, Answer changedAnswer) {
+        Answer answer = jpaAnswerRepository.findById(id).get();
+        if(isEmptyOrNull(changedAnswer.getAnswerText())){
+            answer.setAnswerText(changedAnswer.getAnswerText());}
+        jpaAnswerRepository.save(answer);
+        return "redirect:/answers";
+    }
+
     private boolean isEmptyOrNull(String value) {
         return value != "" && value != null;
     }
