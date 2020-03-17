@@ -54,12 +54,11 @@ public class Question {
     @OneToMany(mappedBy="question")
     private Set<Answer> answers = new HashSet<>();
 
-            private QuestionType(String displayValue) {
-                this.displayValue = displayValue;
-            }
+    public Set<Answer> getAnswers() {
+        return answers;
+    }
 
-            public String getDisplayValue() {
-                return displayValue;
-            }
-        }
+    public void setAnswers(Set<Answer> answers) {
+        this.answers = answers;
+    }
 }
