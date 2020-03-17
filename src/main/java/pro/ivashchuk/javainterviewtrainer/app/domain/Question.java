@@ -51,10 +51,8 @@ public class Question {
         this.questionType = questionType;
     }
 
-        enum QuestionType {
-            BEHAVIORAL("Behavioral"),
-            TECHNICAL("Technical");
-            private final String displayValue;
+    @OneToMany(mappedBy="question")
+    private Set<Answer> answers = new HashSet<>();
 
             private QuestionType(String displayValue) {
                 this.displayValue = displayValue;
