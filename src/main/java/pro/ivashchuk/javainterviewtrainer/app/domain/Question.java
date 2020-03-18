@@ -69,6 +69,11 @@ public class Question {
         answer.setQuestion(this);
     }
 
+    public void removeAnswer(Answer answer) {
+        answers.remove(answer);
+        answer.setQuestion(null);
+    }
+
     @Override
     public String toString() {
         return String.format(
