@@ -63,4 +63,11 @@ public class Question {
     public void setAnswers(Set<Answer> answers) {
         this.answers = answers;
     }
+
+    @Override
+    public String toString() {
+        return String.format(
+                "Question id[id=%d, questionText='%s']",
+                id, questionText);
+    }
 }
