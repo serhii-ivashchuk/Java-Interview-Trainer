@@ -64,6 +64,11 @@ public class Question {
         this.answers = answers;
     }
 
+    public void addAnswer(Answer answer) {
+        answers.add(answer);
+        answer.setQuestion(this);
+    }
+
     @Override
     public String toString() {
         return String.format(
