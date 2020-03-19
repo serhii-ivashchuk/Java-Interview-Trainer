@@ -67,4 +67,11 @@ public class Answer {
     public Answer(Question question) {
         this.question = question;
     }
+
+    @Override
+    public String toString() {
+        return String.format(
+                "Answer id[id=%d, answerText='%s', question='%s']",
+                id, answerText, question);
+    }
 }
