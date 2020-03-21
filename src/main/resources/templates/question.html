@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org" lang="en">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Question</title>
@@ -10,8 +10,8 @@
 <h1>Question</h1>
 <div th:include="header"></div>
 <div th:object="${question}">
-    <span text="">Question</span><br>
+    <h3>Question:</h3>
     <p th:text="${question.questionText}">question</p>
-    </div>
+</div>
 </body>
 </html>
