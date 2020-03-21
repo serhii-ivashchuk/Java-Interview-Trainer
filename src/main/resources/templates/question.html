@@ -13,5 +13,7 @@
     <h3>Question:</h3>
     <p th:text="${question.questionText}">question</p>
 </div>
+<a th:href="@{https://www.google.com/search?q={request}(request=${question.questionText})}">Google it!</a>
+<a th:href="@{https://www.youtube.com/results?search_query={request}&page=&utm_source=opensearch(request=${question.questionText})}">Youtube it!</a>
 </body>
 </html>
