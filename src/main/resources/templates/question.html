@@ -15,5 +15,20 @@
 </div>
 <a th:href="@{https://www.google.com/search?q={request}(request=${question.questionText})}">Google it!</a>
 <a th:href="@{https://www.youtube.com/results?search_query={request}&page=&utm_source=opensearch(request=${question.questionText})}">Youtube it!</a>
+<h1>Answers:</h1>
+<tr th:each="answer: ${question.answers}">
+    <ol>
+        <li>
+            <a th:href="@{/answers/answer/{id}(id=${answer.id})}">
+                <td th:text="${answer.answerText}"/>
+            </a>
+            <td th:text="${answer.answerAudioLink}"/>
+            (id=
+            <td th:text="${answer.id}"/>
+            )
+        </li>
+    </ol>
+</tr>
+<a th:href="@{/questions/question/{id}/addNewAnswer(id=${question.id})}">Add New Answer to this question</a><br>
 </body>
 </html>
