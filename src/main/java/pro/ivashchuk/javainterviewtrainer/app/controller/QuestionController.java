@@ -59,7 +59,7 @@ public class QuestionController {
     public String getChangeQuestionById(@PathVariable("id") Long id, Model model) {
         Question question = jpaQuestionRepository.findById(id).get();
         model.addAttribute("question", question);
-        return "question";
+        return "question_change";
     }
 
     @PostMapping("/question/{id}/change")
