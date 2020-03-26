@@ -59,7 +59,7 @@ public class AnswerController {
     public String getChangeAnswerById(@PathVariable("id") Long id, Model model) {
         Answer answer = jpaAnswerRepository.findById(id).get();
         model.addAttribute("answer", answer);
-        return "answer";
+        return "answer_change";
     }
 
     @PostMapping("/answer/{id}/change")
