@@ -9,11 +9,10 @@
 <body>
 <h1>Answer</h1>
 <div th:include="header"></div>
-<div th:object="${question}">
-    <span text="">Question</span>
-    <p th:text="${question.questionText}">question</p></div>
 <div th:object="${answer}">
-    <span text="">Answer</span>
+        <h3>Question:</h3>
+        <span th:text="${answer.question.questionText}">Question text</span>
+        <h3>Answer:</h3>
     <p th:text="${answer.answerText}">answer</p>
 </div>
 </body>
