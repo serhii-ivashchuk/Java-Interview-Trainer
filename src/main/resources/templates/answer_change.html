@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Answer</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+</head>
+<body>
+<h1>Answer</h1>
+<div th:include="header"></div>
+<div th:object="${answer}">
+    <form method="POST" th:object="${changedAnswer}">
+        <h3>Question:</h3>
+        <span th:text="${answer.question.questionText}">Question text</span>
+        <h3>Answer:</h3>
+        <textarea cols="80" id="answerText" name="answerText" rows="10" th:text="${answer.answerText}"></textarea>
+        <input type="submit" value="Change answer"/>
+        <button onclick="javascript:window.location='/questions';" type="cancel">Cancel</button>
+        <a th:href="@{https://www.google.com/search?q={request}(request=${answer.question.questionText})}">Google
+            it!</a>
+        <a th:href="@{https://www.youtube.com/results?search_query={request}&page=&utm_source=opensearch(request=${answer.question.questionText})}">Youtube
+            it!</a>
+    </form>
+</div>
+</body>
+</html>
