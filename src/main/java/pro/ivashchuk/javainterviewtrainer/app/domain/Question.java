@@ -12,5 +12,6 @@ public class Question {
 
     private String questionText;
 
+    @Enumerated(EnumType.STRING)
     private QuestionType questionType;
 }
